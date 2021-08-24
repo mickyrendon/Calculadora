@@ -17,7 +17,16 @@ restar.addEventListener('click', resta, true);
 multiplicador.addEventListener('click', multiplicacion, true);
 divisor.addEventListener('click', division, true);
 
-
+// mejorar 
+// function validator(){
+ 
+// }
+// validator()
+if(isNaN(operador1.value) == true || isNaN(operador2.value) == true ){
+    alert('ingrese solo valores numericos')
+}else{
+    console.log('valores permitidos');
+}
 // mejorar el codigo /
 function suma(){
     console.log(`sumando`)
@@ -47,6 +56,8 @@ function division(){
 
     return respuesta.value = resultado;
 }
+
+
 
 
 // codigo de stack overflow sobre decimales

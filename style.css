@@ -45,6 +45,14 @@ input{
     text-align: center;
 }
 
+/* ------- modificar por una validacion en js */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none; 
+    margin: 0;
+}
+input[type=number] { -moz-appearance:textfield; }
+/* ------------------  */
 .operador1{
     border-right: none;
 }
@@ -94,3 +102,4 @@ input{
 .operadores button{
     width: 100%;
 }
+
