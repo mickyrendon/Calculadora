@@ -7,7 +7,7 @@ let respuesta = document.getElementById('respuesta');
 
 // botones
 let sumar         = document.getElementById('suma');
-let restar         = document.getElementById('resta');
+let restar        = document.getElementById('resta');
 let multiplicador = document.getElementById('multiplicador');
 let divisor       = document.getElementById('divisor');
 // let igual         = document.getElementById('igual');
@@ -22,6 +22,54 @@ divisor.addEventListener('click', division, true);
  
 // }
 // validator()
+operador1.addEventListener('keydown', catcher, true);
+operador2.addEventListener('keydown', catcher, true);
+
+function catcher(event){
+    let key = event.wich || event.keyCode;
+    let array = [4,50,51,52,53,54,55,56,57,48]
+    for(i=0; i < array.length; i++){
+           let newKey = array[i];
+        if(key !== newKey){
+            console.log('ingrese solo numeros');
+        }else{
+            console.log('valores validos');
+        }
+    }
+       
+    // let array = {
+    //     key : 4,  key : 50,
+    //     key : 51, key : 52, 
+    //     key : 53, key : 54,
+    //     key : 55, key : 56,
+    //     key : 57, key : 48
+    // };
+
+    // if(array[operaciones]){
+    //     // analizar codigo
+    //     array[operaciones]();
+    // }else{
+    //     return alert('ingrese un operador valido, solo numeros');
+    // }
+    console.log(`tecla ${key}`);
+}
+// catcher()
+// function catcher(event) {
+
+//     var codigo = event.which || event.keyCode;
+
+//     console.log("Presionada: " + codigo);
+     
+//     if(codigo === 13){
+//       console.log("Tecla ENTER");
+//     }
+
+//     if(codigo >= 65 && codigo <= 90){
+//       console.log(String.fromCharCode(codigo));
+//     }
+
+     
+// }
 if(isNaN(operador1.value) == true || isNaN(operador2.value) == true ){
     alert('ingrese solo valores numericos')
 }else{
